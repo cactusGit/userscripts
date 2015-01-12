@@ -1,19 +1,12 @@
 // ==UserScript==
-// @name           Etherpad Notifications
-// @description    Chat notifications for Etherpad-based services
-// @version        0.5
+// @name           Piratenpad Ad Blocker
+// @description    Blocks ad in header
+// @version        0.1
 // @grant          none
 // @include        http://piratenpad.de/*
 // @include        http://*.piratenpad.de/*
 // @include        https://piratenpad.de/*
 // @include        https://*.piratenpad.de/*
-// @include        http://piratepad.net/*
-// @include        http://*.piratepad.net/*
-// @include        http://titanpad.com/*
-// @include        http://*.titanpad.com/*
-// @include        https://etherpad.mozilla.org/*
-// @include        https://*.etherpad.mozilla.org/*
-// @include        http://*ponypad*.*/*
 // ==/UserScript==
 
 function addJQuery(callback) {
