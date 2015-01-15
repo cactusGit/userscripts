@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Useful Etherpad keybindings
 // @description    Makes names bold by Ctrl+J and clears authorship info by Ctrl+M for Etherpad-based services
-// @version        0.5
+// @version        0.6
 // @grant          none
 // @include        http://piratenpad.de/*
 // @include        http://*.piratenpad.de/*
@@ -105,7 +105,7 @@
 					if (sel.containsNode(children[i], true /*partial*/)) {
 						var t = children[i].textContent.indexOf(':');
 
-						if (t > -1 && t <= 32 && (children[i].textContent.substr(0, t).match(/ /g) || []).length <= 1) {
+						if (t > -1 && t <= 30 && (children[i].textContent.substr(0, t).match(/ /g) || []).length <= 2) {
 							var spans = children[i].childNodes;
 							var needBold = false;
 							var boldSymbols = 0;
