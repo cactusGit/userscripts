@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Useful Etherpad keybindings
 // @description    Makes names bold by Ctrl+J and clears authorship info by Ctrl+M for Etherpad-based services
-// @version        0.7
+// @version        0.6
 // @grant          none
 // @include        http://piratenpad.de/*
 // @include        http://*.piratenpad.de/*
@@ -127,8 +127,6 @@
 			}
 			else if(evt.ctrlKey && String.fromCharCode (evt.which).toLowerCase() == "m")
 				padeditor.ace.execCommand ('clearauthorship', true);
-			else if(evt.ctrlKey && evt.shiftKey && String.fromCharCode (evt.which).toLowerCase() == " ")
-				alert(String.fromCharCode(parseInt(prompt(), 16)));
 			
 		});
 	}
