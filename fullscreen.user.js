@@ -57,7 +57,7 @@
 		});
 
 		$('#docbarpadtitle').before('<td id="docbarback-outer" class="docbarbutton">\
-			<a href="javascript:void(0);" id="docbarback" title="Return to pad list">⬅︎</a>\
+			<a href="/ep/padlist/" id="docbarback" title="Return to pad list">⬅︎</a>\
 			</td>');
 		$('#docbarback-outer a').css('font-size', '18px');
 
