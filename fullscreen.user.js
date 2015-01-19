@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Enhanced Etherpad
 // @description    Removes useless footer and header.
-// @version        0.1
+// @version        0.2
 // @grant          none
 // @include        http://piratenpad.de/*
 // @include        http://*.piratenpad.de/*
@@ -56,9 +56,14 @@
 			$('body').toggleClass('maximized');
 		});
 
-		$('#docbarpadtitle').before('<td id="docbarback-outer" class="docbarbutton">\
-			<a href="/ep/padlist/" id="docbarback" title="Return to pad list">⬅︎</a>\
-			</td>');
+		if(pad.myUserInfo.userId.substring(0,1) == 'g')
+			$('#docbarpadtitle').before('<td id="docbarback-outer" class="docbarbutton">\
+				<a href="/ep/account/sign-in?cont=%2f'+escape(pad.getPadId())+'" id="docbarback" title="Return to pad list">⬅︎</a>\
+				</td>');
+		else
+			$('#docbarpadtitle').before('<td id="docbarback-outer" class="docbarbutton">\
+				<a href="/ep/padlist/" id="docbarback" title="Return to pad list">⬅︎</a>\
+				</td>');
 		$('#docbarback-outer a').css('font-size', '18px');
 
 		$('#docbarpadtitle').css('left', '32px');
