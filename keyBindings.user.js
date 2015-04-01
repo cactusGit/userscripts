@@ -125,7 +125,7 @@
 						}
 					}
 			}
-			if(evt.ctrlKey && evt.shiftKey && String.fromCharCode (evt.which).toLowerCase() == "m") {
+			else if(evt.ctrlKey && evt.shiftKey && String.fromCharCode (evt.which).toLowerCase() == "m") {
 				var children = $("iframe").contents().find('body#outerdocbody iframe').contents().find('body')[0].children;
 
 				var sel = rangy.getSelection(iframe);
@@ -141,7 +141,6 @@
 						}
 					}
 			}
-			
 			else if(evt.ctrlKey && String.fromCharCode (evt.which).toLowerCase() == "m")
 				padeditor.ace.execCommand ('clearauthorship', true);
 			
